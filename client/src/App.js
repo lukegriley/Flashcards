@@ -40,13 +40,15 @@ function App() {
     <div className="usersDisplay">
       {listOfUsers.map((user) =>{
       return (
-        <div>
+        <div key={user._id}>
           <h1>Name: {user.name}</h1>
           <h1>Username: {user.username}</h1>
           <h1>Email: {user.email}</h1>
         </div>
+        
       );
     })}
+    
     </div>
     <div className="userForm">
       <input type="text" placeholder="Name" onChange={(e)=>{
@@ -60,6 +62,7 @@ function App() {
         }}/>
       <button onClick={createUser}>Create User</button>
     </div>
+    <Deck numbers = {[1,2,3,4,5]}/>
   </div>
   );
 }

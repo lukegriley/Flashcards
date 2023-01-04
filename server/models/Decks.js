@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const Schema = mongoose.Schema;
 
 const DeckSchema = new mongoose.Schema({
     author:{type:Schema.ObjectId,ref:'user',required:true},
